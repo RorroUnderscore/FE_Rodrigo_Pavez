@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovatech Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Innovatech Solutions</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#Inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccionProd">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccionServ">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccionCons">Consultas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenido -->
+<div class="container mt-4">
+    <h1 id="Inicio">Bienvenido a Innovatech Solutions</h1>
+    <br>
+
+    <div id="seccionProd" class="contenedor text-center">
+        <br>
+        <h2>Ve Nuestros Productos</h2>
+        <br>
+        <div class="row contenedor2">
+            <div class="col">
+                <h2>Procesadores</h2>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a id="IMGB" href="https://www.intel.la/content/www/xl/es/products/details/processors.html" class="btn btn-light row">
+                        <img src="Intel.png" alt="#">
+                    </a>
+                    <a id="IMGB" href="https://www.amd.com/es/products/processors/ryzen-for-professionals.html" class="btn btn-warning row">
+                        <img src="Amd.png" alt="#">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row contenedor2">
+            <div class="col">
+                <h2>Targetas Graficas</h2>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a id="IMGB" href="https://www.nvidia.com/es-la/geforce/graphics-cards/" class="btn btn-dark row">
+                        <img src="Nvidia.png" alt="#">
+                    </a>
+                    <a id="IMGB" href="https://www.amd.com/es/graphics/radeon-rx-graphics" class="btn btn-warning row">
+                        <img src="Amd.png" alt="#">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row contenedor2">
+            <div class="col">
+                <h2>Gabinetes</h2>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a id="IMGB" href="https://www.asus.com/latin/motherboards-components/cases/all-series/" class="btn btn-light row">
+                        <img src="Asus.png" alt="#">
+                    </a>
+                    <a id="IMGB" href="https://www.coolermaster.com/la/es-la/catalog/cases/mini-tower/masterbox-q300l/" class="btn btn-info row">
+                        <img src="Cooler.png" alt="#">
+                    </a>
+                    <a id="IMGB" href="https://aerocool.io/la/cases/" class="btn btn-primary row">
+                        <img src="Aerocool.png" alt="#">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+    <div id="seccionServ" class="contenedor text-center">
+        <br>
+        <h2>Consulta Nuestros Servicios</h2>
+        <br>
+        <div class="row contenedor2">
+            <div class="col">
+                <h2></h2>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a id="IMGB" href="#" class="btn btn-light row">
+                        <h1>Servicio Tecnico</h1>
+                    </a>
+                    <a id="IMGB" href="#" class="btn btn-secondary row">
+                        <h1>Armado de PC</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Consultas -->
+  <br><br>
+    <div id="seccionCons" class="contenedorf">
+        <h2>¿Tienes alguna Duda?</h2>
+        <form class="contenedor">
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="mb-3">
+            <label for="sugerencia" class="form-label">Consulta</label>
+            <textarea class="form-control" id="sugerencia" rows="3" placeholder="Escribe tu sugerencia aquí"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-light">Enviar</button>
+        </form>
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+<script>
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        const offset = 65;
+        if (target) {
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: targetPosition - offset,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
